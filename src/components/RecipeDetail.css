@@ -1,3 +1,12 @@
+.RecipeDetail {
+    padding: 1em 2em;
+}
+
+.RecipeCardLink {
+    text-decoration: none;
+    color: inherit;
+}
+
 .recipe-top-container {
     position: relative;
     display: flex;
@@ -10,9 +19,9 @@
     position: absolute;
     left: 0;
     background: #f8f8f8;
-    font-size: 1.5em;
+    font-size: 1.2em;
     border-radius: 15px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     cursor: pointer;
 }

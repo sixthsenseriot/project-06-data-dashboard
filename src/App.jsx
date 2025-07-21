@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
 import SideNavBar from "./components/SideNavBar";
@@ -49,45 +50,49 @@ const App = () => {
         <div className="App">
             <SideNavBar />
             <main className="main-content">
-                <div className="api-form-container">
-                    <APIForm onRecipeFetch={handleRecipeFetch} />
-                </div>
-
+                {/* Restore scrollable wrapper */}
                 <div className="content-wrapper">
-                    {selectedRecipe ? (
-                        <div className="recipe-detail-container">
-                            <RecipeDetail
-                                recipe={selectedRecipe}
-                                onBack={handleBackToResults}
-                            />
-                        </div>
-                    ) : (
-                        <div className="recipe-results-wrapper">
-                            <div
-                                className={`recipe-results ${
-                                    hasSearched && recipeResults.length === 0
-                                        ? "empty"
-                                        : ""
-                                }`}
-                            >
-                                {hasSearched && recipeResults.length === 0 ? (
-                                    <p className="no-results-message">
-                                        No recipes found. Try another search!
-                                    </p>
-                                ) : (
-                                    recipeResults.map((recipe) => (
-                                        <RecipeCard
-                                            key={recipe.id}
-                                            recipe={recipe}
-                                            onClick={() =>
-                                                handleCardClick(recipe)
-                                            }
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <>
+                                    <div className="api-form-container">
+                                        <APIForm
+                                            onRecipeFetch={handleRecipeFetch}
                                         />
-                                    ))
-                                )}
-                            </div>
-                        </div>
-                    )}
+                                    </div>
+                                    <div className="recipe-results-wrapper">
+                                        <div
+                                            className={`recipe-results ${
+                                                hasSearched &&
+                                                recipeResults.length === 0
+                                                    ? "empty"
+                                                    : ""
+                                            }`}
+                                        >
+                                            {hasSearched &&
+                                            recipeResults.length === 0 ? (
+                                                <p className="no-results-message">
+                                                    No recipes found. Try
+                                                    another search!
+                                                </p>
+                                            ) : (
+                                                recipeResults.map((recipe) => (
+                                                    <RecipeCard
+                                                        key={recipe.id}
+                                                        recipe={recipe}
+                                                    />
+                                                ))
+                                            )}
+                                        </div>
+                                    </div>
+                                </>
+                            }
+                        />
+
+                        <Route path="/recipes/:id" element={<RecipeDetail />} />
+                    </Routes>
                 </div>
             </main>
         </div>
