@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./RecipeDetail.css";
+import NutritionChart from "./NutritionChart";
 
 const RecipeDetail = ({ recipe, onBack }) => {
     const [fullRecipe, setFullRecipe] = useState(null);
@@ -114,6 +115,19 @@ const RecipeDetail = ({ recipe, onBack }) => {
             <div className="nutrition">
                 <h3>Nutrition</h3>
                 {fullRecipe.nutrition ? (
+                    <>
+                        <NutritionChart
+                            nutrients={fullRecipe.nutrition.nutrients}
+                        />
+                    </>
+                ) : (
+                    <p>No nutrition info available.</p>
+                )}
+            </div>
+
+            {/* <div className="nutrition">
+                <h3>Nutrition</h3>
+                {fullRecipe.nutrition ? (
                     <ul>
                         {fullRecipe.nutrition.nutrients.map(
                             (nutrient, index) => (
@@ -127,7 +141,7 @@ const RecipeDetail = ({ recipe, onBack }) => {
                 ) : (
                     <p>No nutrition info available.</p>
                 )}
-            </div>
+            </div> */}
         </div>
     );
 };
