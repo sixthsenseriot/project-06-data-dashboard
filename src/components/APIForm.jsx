@@ -70,15 +70,15 @@ const APIForm = (props) => {
         }
     }, [resetFilters]);
 
-    // DEBUG KTN
+    // DEBUG KTN: Comment out this useEffect hook to limit API calls
     // Auto-fetch recipes on applying filters
-    // useEffect(() => {
-    //     const delayDebounce = setTimeout(() => {
-    //         fetchRecipes();
-    //     }, 400);
+    useEffect(() => {
+        const delayDebounce = setTimeout(() => {
+            fetchRecipes();
+        }, 400);
 
-    //     return () => clearTimeout(delayDebounce);
-    // }, [cuisine, diet, type, maxCalories]);
+        return () => clearTimeout(delayDebounce);
+    }, [cuisine, diet, type, maxCalories]);
 
     return (
         <div className="APIForm">
