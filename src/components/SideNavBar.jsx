@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import "./SideNavBar.css";
 
 const SideNavBar = () => {
     return (
         <div className="SideNavBar">
             <h1 className="page-header">Yommers</h1>
-            <a href="" className="nav-link">
+            <Link to="/" className="nav-link">
                 Dashboard
-            </a>
-            <a href="" className="nav-link">
+            </Link>
+            <Link to="/about" className="nav-link">
                 About
-            </a>
+            </Link>
         </div>
     );
 };

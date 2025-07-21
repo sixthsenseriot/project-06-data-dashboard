@@ -5,6 +5,7 @@ import SideNavBar from "./components/SideNavBar";
 import APIForm from "./components/APIForm";
 import RecipeCard from "./components/RecipeCard";
 import RecipeDetail from "./components/RecipeDetail";
+import About from "./components/About";
 
 const App = () => {
     const [recipeResults, setRecipeResults] = useState([]);
@@ -91,7 +92,11 @@ const App = () => {
                             }
                         />
 
+                        {/* Recipe Detail */}
                         <Route path="/recipes/:id" element={<RecipeDetail />} />
+
+                        {/* About Page */}
+                        <Route path="/about" element={<About />} />
                     </Routes>
                 </div>
             </main>
