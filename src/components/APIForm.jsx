@@ -70,14 +70,15 @@ const APIForm = (props) => {
         }
     }, [resetFilters]);
 
+    // DEBUG KTN
     // Auto-fetch recipes on applying filters
-    useEffect(() => {
-        const delayDebounce = setTimeout(() => {
-            fetchRecipes();
-        }, 400);
+    // useEffect(() => {
+    //     const delayDebounce = setTimeout(() => {
+    //         fetchRecipes();
+    //     }, 400);
 
-        return () => clearTimeout(delayDebounce);
-    }, [cuisine, diet, type, maxCalories]);
+    //     return () => clearTimeout(delayDebounce);
+    // }, [cuisine, diet, type, maxCalories]);
 
     return (
         <div className="APIForm">

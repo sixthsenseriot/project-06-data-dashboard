@@ -43,7 +43,27 @@
     border: 1px solid #ccc;
     border-radius: 16px;
     padding: 4px 10px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+.type-tag {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.6rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+.calorie-tag {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 4px 10px;
+    font-size: 0.6rem;
     color: #333;
     white-space: nowrap;
 }

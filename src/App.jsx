@@ -25,23 +25,25 @@ const App = () => {
         setSelectedRecipe(null);
     };
 
-    useEffect(() => {
-        const fetchDefaultRecipes = async () => {
-            const spoonApiKey = import.meta.env.VITE_SPOON_API_KEY;
+    // DEBUG KTN
+    // useEffect(() => {
+    //     const fetchDefaultRecipes = async () => {
+    //         const spoonApiKey = import.meta.env.VITE_SPOON_API_KEY;
 
-            try {
-                const result = await fetch(
-                    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${spoonApiKey}&query=${defaultQuery}&addRecipeInformation=true&number=${defaultRecipeNumber}`
-                );
-                const data = await result.json();
-                setRecipeResults(data.results);
-            } catch (error) {
-                console.error("Failed to load default recipes:", error);
-            }
-        };
+    //         try {
+    //             const result = await fetch(
+    //                 `https://api.spoonacular.com/recipes/complexSearch?apiKey=${spoonApiKey}&query=${defaultQuery}&addRecipeInformation=true&number=${defaultRecipeNumber}`
+    //             );
+    //             const data = await result.json();
+    //             setRecipeResults(data.results);
+    //         } catch (error) {
+    //             console.error("Failed to load default recipes:", error);
+    //         }
+    //     };
 
-        fetchDefaultRecipes();
-    }, []);
+    //     fetchDefaultRecipes();
+    // }, []);
+    // DEBUG KTN
 
     return (
         <div className="App">
