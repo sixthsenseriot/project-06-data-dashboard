@@ -55,7 +55,9 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the most challenging parts of building this app was working with the Recharts library to visualize nutritional data. While Recharts offers powerful components for creating dynamic and interactive charts, it required careful data preprocessing, especially converting various nutrient units (like IU or µg) into consistent values (mg) for accurate representation.
+
+Additionally, grouping vitamins and minerals meaningfully, customizing chart layouts, and ensuring accessibility and responsiveness across devices added layers of complexity. Despite the learning curve, implementing these visualizations was rewarding and greatly enhanced the user experience by making nutrition data more digestible and intuitive.
 
 ## License
 
