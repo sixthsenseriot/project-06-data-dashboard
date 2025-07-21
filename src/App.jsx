@@ -10,21 +10,10 @@ import About from "./components/About";
 const App = () => {
     const [recipeResults, setRecipeResults] = useState([]);
     const [hasSearched, setHasSearched] = useState(false);
-    const [selectedRecipe, setSelectedRecipe] = useState(null);
-    const [defaultQuery, setDefaultQuery] = useState("");
-    const [defaultRecipeNumber, setDefaultRecipeNumber] = useState(12);
 
     const handleRecipeFetch = (recipes) => {
         setHasSearched(true);
         setRecipeResults(recipes || []);
-    };
-
-    const handleCardClick = (recipe) => {
-        setSelectedRecipe(recipe);
-    };
-
-    const handleBackToResults = () => {
-        setSelectedRecipe(null);
     };
 
     return (

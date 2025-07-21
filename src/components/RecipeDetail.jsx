@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./RecipeDetail.css";
 import NutritionChart from "./NutritionChart";
 
-const RecipeDetail = ({ recipe, onBack }) => {
+const RecipeDetail = ({ onBack }) => {
     const { id } = useParams();
     const navigate = useNavigate();
 

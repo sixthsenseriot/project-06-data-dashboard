@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./RecipeCard.css";
 import recipePlaceHolderImage from "../assets/images/recipe-placeholder-image.jpg";
 
-const RecipeCard = ({ recipe, onClick }) => {
+const RecipeCard = ({ recipe }) => {
     function capitalizeWord(word) {
         if (typeof word !== "string" || word.length === 0) return "";
         return word
