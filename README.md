@@ -2,22 +2,28 @@
 
 Submitted by: **Khanh Nguyen**
 
-This web app: **insert description**
+Yommers is your all-in-one recipe search app designed for food lovers and health-conscious cooks alike. Easily discover a wide variety of recipes complete with ingredients, step-by-step cooking instructions, and detailed nutrition facts.
 
-Time spent: **X** hours spent in total
+Whether you're in the mood for a specific cuisine, following a particular diet, or tracking your calorie intake, Yommers helps you filter and find the perfect dish for any craving or lifestyle.
+
+This app also visualizes nutritional data using beautiful and easy-to-read charts and graphs to help you make more informed decisions about what you eat.
+
+Eat smart. Cook better. Explore delicious possibilities with Yommers.
+
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
--   [ ] **Clicking on an item in the list view displays more details about it**
+-   [x] **Clicking on an item in the list view displays more details about it**
     -   Clicking on an item in the dashboard list navigates to a detail view for that item
     -   Detail view includes extra information about the item not included in the dashboard view
     -   The same sidebar is displayed in detail view as in dashboard view
     -   _To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording._
--   [ ] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+-   [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
     -   _To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording._
--   [ ] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+-   [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
     -   At least two charts should be incorporated into the dashboard view of the site
     -   Each chart should describe a different aspect of the dataset
 
@@ -30,7 +36,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
--   [ ] List anything else that you added to improve the site's functionality!
+-   [x] Added route to 'About' page, detailing information on web application
 
 ## Video Walkthrough
 
