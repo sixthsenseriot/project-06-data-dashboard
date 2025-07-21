@@ -1,0 +1,94 @@
+.APIForm form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.search-group {
+    display: flex;
+    flex: 1;
+    padding: 0.8em 0;
+}
+
+.search-group input[type="text"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #f3e6d4;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 0.8rem;
+    background-color: white;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.search-group button {
+    background-color: #ff8c42;
+    color: white;
+    border: 1px solid #f3e6d4;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-group button:hover {
+    background-color: #e7772a;
+}
+
+.filter-button {
+    background-color: #ff8c42;
+    color: white;
+    border: 1px solid #f3e6d4;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #e7772a;
+}
+
+.filter-popup {
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-popup label {
+    display: flex;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.filter-popup select {
+    margin-left: 5px;
+}
+
+.calories-input {
+    margin-left: 5px;
+}
+
+.apply-filter-button,
+.clear-filter-button {
+    border: solid 1px gray;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

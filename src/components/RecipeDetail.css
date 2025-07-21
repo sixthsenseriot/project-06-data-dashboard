@@ -1,0 +1,32 @@
+.recipe-top-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    position: absolute;
+    left: 0;
+    background: #f8f8f8;
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.recipe-title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.food-image {
+    border-radius: 10px;
+}
