@@ -42,11 +42,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Website Walkthrough](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnc0cnlodmczdjZyZHlkZGphcnRtZnh2bGJsZWE0ZDg4azRwbjZsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z46IXDefAXDufOqG9F/giphy.gif)
+
+🔗 [Link for Better Viewing of Walkthrough](https://imgur.com/gallery/codepath-project-6-data-dashboard-kn-aFVBAhf)
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with [LICEcap v1.32](https://www.cockos.com/licecap/)
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
