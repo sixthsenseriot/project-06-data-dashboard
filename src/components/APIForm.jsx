@@ -1,21 +1,26 @@
 import { useState, useEffect } from "react";
 import "./APIForm.css";
 
-const APIForm = (props) => {
+const APIForm = ({
+    onRecipeFetch,
+    inputValue,
+    setInputValue,
+    cuisine,
+    setCuisine,
+    diet,
+    setDiet,
+    type,
+    setType,
+    maxCalories,
+    setMaxCalories,
+}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [inputValue, setInputValue] = useState("");
     const [showFilters, setShowFilters] = useState(false);
 
-    // Filter states
-    const [cuisine, setCuisine] = useState("");
-    const [diet, setDiet] = useState("");
-    const [type, setType] = useState("");
-    const [maxCalories, setMaxCalories] = useState("");
-
-    const [resetFilters, setResetFilters] = useState(false);
-
     const fetchRecipes = async () => {
+        if (!inputValue.trim()) return;
+
         setLoading(true);
         const spoonApiKey = import.meta.env.VITE_SPOON_API_KEY;
 
@@ -37,7 +42,7 @@ const APIForm = (props) => {
         try {
             const result = await fetch(url.toString());
             const recipesData = await result.json();
-            props.onRecipeFetch(recipesData.results);
+            onRecipeFetch(recipesData.results);
         } catch (error) {
             console.error("Failed to load recipes:", error);
             setError("Failed to load recipes. Try again.");
@@ -59,26 +64,19 @@ const APIForm = (props) => {
         setType("");
         setMaxCalories("");
         setShowFilters(false);
-        setResetFilters(true);
     };
 
-    // Clears filters and ensures next render cycle sees updated values
     useEffect(() => {
-        if (resetFilters) {
-            fetchRecipes();
-            setResetFilters(false);
-        }
-    }, [resetFilters]);
+        fetchRecipes();
+    }, [cuisine, diet, type]);
 
-    // DEBUG KTN: Comment out this useEffect hook to limit API calls
-    // Auto-fetch recipes on applying filters
     useEffect(() => {
         const delayDebounce = setTimeout(() => {
             fetchRecipes();
         }, 400);
 
         return () => clearTimeout(delayDebounce);
-    }, [cuisine, diet, type, maxCalories]);
+    }, [maxCalories]);
 
     return (
         <div className="APIForm">
@@ -202,15 +200,6 @@ const APIForm = (props) => {
                             className="calories-input"
                         />
                     </label>
-                    {/* <button
-                        onClick={(e) => {
-                            toggleFilters();
-                            handleSubmit(e);
-                        }}
-                        className="apply-filter-button"
-                    >
-                        Apply Filters
-                    </button> */}
                     <button
                         onClick={clearFilters}
                         className="clear-filter-button"
