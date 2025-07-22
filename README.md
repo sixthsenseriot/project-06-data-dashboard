@@ -10,6 +10,10 @@ This app also visualizes nutritional data using beautiful and easy-to-read chart
 
 Eat smart. Cook better. Explore delicious possibilities with Yommers.
 
+🔗 [View Live Website](https://yommers.netlify.app/) 
+
+(Please search and use sparingly - I only have so many API calls)
+
 Time spent: **8** hours spent in total
 
 ## Required Features
